@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>📰 News App</h1>
+      <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search global news..." />
+        <button type="submit">Search</button>
+        <button type="button" id="clearBtn">Clear</button>
+      </form>
+
+      <div class="filters">
+        <select id="countrySelect">
+          <option value="us">🇺🇸 US</option>
+          <option value="in">🇮🇳 India</option>
+          <option value="gb">🇬🇧 UK</option>
+          <option value="au">🇦🇺 Australia</option>
+          <option value="ca">🇨🇦 Canada</option>
+        </select>
+
+        <select id="sortSelect">
+          <option value="publishedAt">🕒 Latest</option>
+          <option value="relevancy">📌 Relevance</option>
+          <option value="popularity">🔥 Popularity</option>
+        </select>
+      </div>
+
+      <div class="categories" id="categories">
+        <button data-category="general" class="active">General</button>
+        <button data-category="business">Business</button>
+        <button data-category="technology">Technology</button>
+        <button data-category="sports">Sports</button>
+        <button data-category="health">Health</button>
+        <button data-category="entertainment">Entertainment</button>
+      </div>
+    </header>
+
+    <div id="newsContainer" class="news-grid"></div>
+
+    <div class="pagination">
+      <button id="prevBtn">⬅ Prev</button>
+      <button id="nextBtn">Next ➡</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
